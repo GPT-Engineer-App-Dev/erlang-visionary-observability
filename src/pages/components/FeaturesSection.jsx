@@ -6,17 +6,20 @@ const features = [
   {
     icon: <Activity className="h-8 w-8 mb-4 text-primary" />,
     title: "Real-time Monitoring",
-    description: "Get real-time insights into your Erlang applications."
+    description: "Get real-time insights into your Erlang applications with metrics, logs, and traces.",
+    example: "Use :telemetry.execute/3 to emit metrics in real-time."
   },
   {
     icon: <BarChart2 className="h-8 w-8 mb-4 text-primary" />,
     title: "Detailed Metrics",
-    description: "Access detailed metrics and logs for better analysis."
+    description: "Access detailed metrics and logs for better analysis of your Erlang systems.",
+    example: "Leverage the Logger module for structured logging with metadata."
   },
   {
     icon: <Bell className="h-8 w-8 mb-4 text-primary" />,
-    title: "Alerting System",
-    description: "Set up alerts to stay informed about critical issues."
+    title: "Distributed Tracing",
+    description: "Implement distributed tracing to understand request flow across your Erlang services.",
+    example: "Use OpenTelemetry for comprehensive distributed tracing."
   }
 ];
 
@@ -35,7 +38,8 @@ const FeaturesSection = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p>{feature.description}</p>
+                <p className="mb-4">{feature.description}</p>
+                <p className="text-sm text-muted-foreground">{feature.example}</p>
               </CardContent>
             </Card>
           ))}
